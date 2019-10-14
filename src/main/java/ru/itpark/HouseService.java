@@ -5,6 +5,7 @@ import ru.itpark.model.House;
 import java.util.ArrayList;
 
 public class HouseService {
+    private int id=0;
     private ArrayList<House> housesList;
 
     public HouseService() {
@@ -12,6 +13,7 @@ public class HouseService {
     }
 
     public void addHouse(House house) {
+        house.setId(id++);
         housesList.add(house);
     }
 

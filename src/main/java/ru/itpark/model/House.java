@@ -12,6 +12,7 @@ public class House {
     private boolean isOwner;
     private String district;
     private int postalCode;
+    private int id;
 
     public House(OfferType offerType, ApartmentType apartmentType, int rooms, int floor, int price, String district) {
         this.offerType = offerType;
@@ -94,10 +95,19 @@ public class House {
         this.postalCode = postalCode;
     }
 
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
     @Override
     public String toString() {
         return "House{" +
-                "offerType=" + offerType +
+                "id=" + id +
+                ", offerType=" + offerType +
                 ", apartmentType=" + apartmentType +
                 ", rooms=" + rooms +
                 ", floor=" + floor +
