@@ -7,28 +7,17 @@ public class House {
     private OfferType offerType;
     private ApartmentType apartmentType;
     private int rooms;
-    private int floor;
     private int price;
     private boolean isOwner;
     private String district;
-    private int postalCode;
     private int id;
 
-    public House(OfferType offerType, ApartmentType apartmentType, int rooms, int floor, int price, String district) {
+    public House(OfferType offerType, ApartmentType apartmentType, int rooms, int price, String district) {
         this.offerType = offerType;
         this.apartmentType = apartmentType;
         this.rooms = rooms;
-        this.floor = floor;
         this.price = price;
         this.district = district;
-    }
-
-    public int getFloor() {
-        return floor;
-    }
-
-    public void setFloor(int floor) {
-        this.floor = floor;
     }
 
     public int getPrice() {
@@ -87,14 +76,6 @@ public class House {
         this.district = district;
     }
 
-    public int getPostalCode() {
-        return postalCode;
-    }
-
-    public void setPostalCode(int postalCode) {
-        this.postalCode = postalCode;
-    }
-
     public int getId() {
         return id;
     }
@@ -110,7 +91,6 @@ public class House {
                 ", offerType=" + offerType +
                 ", apartmentType=" + apartmentType +
                 ", rooms=" + rooms +
-                ", floor=" + floor +
                 ", price=" + price +
                 ", district='" + district + '\'' +
                 "}\n";

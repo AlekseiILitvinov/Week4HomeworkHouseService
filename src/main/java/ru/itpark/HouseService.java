@@ -1,6 +1,7 @@
 package ru.itpark;
 
 import ru.itpark.model.House;
+import ru.itpark.model.SearchParameters;
 
 import java.util.ArrayList;
 
@@ -54,5 +55,19 @@ public class HouseService {
 
     public ArrayList<House> searchByDistrictAndPrice(String district, int max) {
         return searchByDistrictAndPrice(district, 0, max);
+    }
+
+    public ArrayList<House> searchComplex(SearchParameters parameters){
+        ArrayList<House> results = new ArrayList<>();
+        for (House house : housesList) {
+            if (parameters.getDistrict().toLowerCase().contains(house.getDistrict().toLowerCase()) &&
+                house.getPrice() <= parameters.getPriceMax() && house.getPrice() >= parameters.getPriceMin() &&
+                house.getApartmentType() == parameters.getApartmentType() &&
+                    house.getOfferType() == parameters.getOfferType() &&
+                    (parameters.getRoomsList().isEmpty() || parameters.getRoomsList().contains(house.getRooms()))) {
+                results.add(house);
+            }
+        }
+        return results;
     }
 }
