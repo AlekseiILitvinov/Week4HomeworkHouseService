@@ -43,9 +43,9 @@ public class HouseService {
 
     public ArrayList<House> searchByDistrictAndPrice(String district, int min, int max) {
         ArrayList<House> results = new ArrayList<>();
-        for (House house : housesList) {
-            if (district.toLowerCase().contains(house.getDistrict().toLowerCase()) &&
-                    house.getPrice() <= max && house.getPrice() >= min) {
+        ArrayList<House> intermediateResults = searchByPrice(min,max);
+        for (House house : intermediateResults) {
+            if (district.toLowerCase().contains(house.getDistrict().toLowerCase())) {
                 results.add(house);
             }
         }
