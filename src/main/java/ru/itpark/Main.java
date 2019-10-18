@@ -40,5 +40,9 @@ public class Main {
         SearchParameters parameters = new SearchParameters(OfferType.RENT_LONG, ApartmentType.APARTMENT, roomsList, districtsToSearch, 50_000);
         System.out.println("Complex search engine v0.01");
         System.out.println(service.searchComplex(parameters));
+
+        System.out.println("\n\nshould find none");
+        SearchParameters parametersBad = new SearchParameters(OfferType.BUY, ApartmentType.HOUSE_SECTION, roomsList, districtsToSearch, 5_000);
+        System.out.println(service.searchComplex(parametersBad));
     }
 }
