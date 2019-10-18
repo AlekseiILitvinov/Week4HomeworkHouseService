@@ -4,6 +4,7 @@ import ru.itpark.model.ApartmentType;
 import ru.itpark.model.House;
 import ru.itpark.model.OfferType;
 import ru.itpark.model.SearchParameters;
+import ru.itpark.service.HouseService;
 
 import java.util.ArrayList;
 

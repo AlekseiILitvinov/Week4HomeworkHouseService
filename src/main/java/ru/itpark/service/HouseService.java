@@ -1,4 +1,4 @@
-package ru.itpark;
+package ru.itpark.service;
 
 import ru.itpark.model.House;
 import ru.itpark.model.SearchParameters;
