@@ -77,16 +77,6 @@ public class HouseService {
         return results;
     }
 
-    private ArrayList<House> filterPrice(int min, int max, ArrayList<House> list) {
-        ArrayList<House> results = new ArrayList<>();
-        for (House house : list) {
-            if (house.getPrice() <= max && house.getPrice() >= min) {
-                results.add(house);
-            }
-        }
-        return results;
-    }
-
     private ArrayList<House> filterRooms(ArrayList<Integer> roomList, ArrayList<House> list) {
         ArrayList<House> results = new ArrayList<>();
         for (House house : list) {
