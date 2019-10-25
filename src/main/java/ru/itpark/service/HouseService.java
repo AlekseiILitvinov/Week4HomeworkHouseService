@@ -8,14 +8,14 @@ import ru.itpark.model.SearchParameters;
 import java.util.ArrayList;
 
 public class HouseService {
-    private int id = 0;
+    private int nextId = 1;
     private ArrayList<House> housesList = new ArrayList<>();
 
     public HouseService() {
     }
 
     public void addHouse(House house) {
-        house.setId(id++);
+        house.setId(nextId++);
         housesList.add(house);
     }
 
